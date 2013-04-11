@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" 
+    android:background="#000000"
+    android:id="@+id/parent_view"
+    >
+
+    <com.brightcove.player.view.BrightcoveVideoView
+        android:id="@+id/video_view"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+    	android:layout_centerInParent="true"
+    />
+
+    <FrameLayout
+        android:id="@+id/ad_frame"
+        android:layout_width="728px"
+        android:layout_height="90px"
+        android:layout_below="@id/video_view"
+        android:layout_centerHorizontal="true" >
+    </FrameLayout>
+    
+</RelativeLayout>
