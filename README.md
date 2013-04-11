@@ -1,7 +1,7 @@
 Android-Native-Player-Samples
 =============================
 
-This repository contains a variety of [Brightcove Video Player SDK for Androud](http://support.brightcove.com/en/video-cloud/docs/brightcove-video-cloud-player-sdk-android) demos and code samples that can be loaded and viewed in Eclipse
+This repository contains a variety of [Brightcove Video Player SDK for Android](http://support.brightcove.com/en/video-cloud/docs/brightcove-video-cloud-player-sdk-android) demos and code samples that can be loaded and viewed in Eclipse
 
 Sample List
 -----------
