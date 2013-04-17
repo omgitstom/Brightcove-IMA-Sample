@@ -174,9 +174,6 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		/*
-		 * 
-		 */
 		videoView.getEventEmitter().on(GoogleIMAEventType.DID_BEGIN_PLAYING_AD, new EventListener() {
 			
 			@Override
