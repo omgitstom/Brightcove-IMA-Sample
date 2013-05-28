@@ -27,6 +27,3 @@ proguard/
 *.ipr
 *.iws
 .idea/
-
-# Xcode
-.DS_Store

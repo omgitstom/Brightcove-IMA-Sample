@@ -1,6 +1,5 @@
 package com.brightcove.example.androidvideodemo;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -10,9 +9,9 @@ import java.util.Map;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.ViewGroup;
+import android.widget.MediaController;
 
 import com.brightcove.ima.GoogleIMAComponent;
 import com.brightcove.ima.GoogleIMAEventType;
@@ -25,8 +24,6 @@ import com.brightcove.player.model.CuePoint.PositionType;
 import com.brightcove.player.model.Video;
 import com.brightcove.player.view.BrightcoveVideoView;
 import com.brightcove.sdk.sample.googleima.R;
-import com.google.ads.interactivemedia.api.AdsManager.AdEvent;
-import com.google.ads.interactivemedia.api.AdsManager.AdEventType;
 import com.google.ads.interactivemedia.api.CompanionAdSlot;
 import com.google.ads.interactivemedia.api.SimpleAdsRequest;
 import com.google.ads.interactivemedia.api.SimpleAdsRequest.AdType;
@@ -55,6 +52,9 @@ public class MainActivity extends Activity {
 		
 		//Get the video view
 		final BrightcoveVideoView videoView = (BrightcoveVideoView) findViewById(R.id.video_view);
+		
+		MediaController controller = new MediaController(this);
+		videoView.setMediaController(controller);
 		
 		//Initialize the Brightcove Google IMA Component 
 		GoogleIMAComponent comp = new GoogleIMAComponent(videoView, videoView.getEventEmitter());
@@ -107,7 +107,7 @@ public class MainActivity extends Activity {
 				points.add(point);
 				
 				//Create details for the cuepoints
-				Map<String, Serializable> details = new HashMap<String, Serializable>();
+				Map<String, Object> details = new HashMap<String, Object>();
 				details.put(Event.CUE_POINTS, points);
 				
 				/*
