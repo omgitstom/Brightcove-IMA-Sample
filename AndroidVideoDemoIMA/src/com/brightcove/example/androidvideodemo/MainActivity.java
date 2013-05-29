@@ -9,6 +9,7 @@ import java.util.Map;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.ViewGroup;
 import android.widget.MediaController;
@@ -30,7 +31,7 @@ import com.google.ads.interactivemedia.api.SimpleAdsRequest.AdType;
 
 public class MainActivity extends Activity {
 	//Tag used for logging
-	//private static final String TAG = "BrightcoveAndroidIMASample";
+	private static final String TAG = "BrightcoveAndroidIMASample";
 	
 	//URL of the video we are playing
 	private static final String VIDEO_URL = "http://cf9c36303a9981e3e8cc-31a5eb2af178214dc2ca6ce50f208bb5.r97.cf1.rackcdn.com/lucy_gets_shot_1280x720.mp4";
@@ -178,7 +179,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void processEvent(Event arg0) {
-				
+				Log.v(TAG, arg0.properties.toString());
 				//Check here to see if you want to hide / show the companion ad
 			}
 		});
